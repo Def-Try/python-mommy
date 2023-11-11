@@ -1,5 +1,5 @@
 [project]
-name = "python_mommy"
+name = "pythonmommy"
 version = "0.1.0"
 authors = [
   { name="googer", email="googer@gmail.com" },
@@ -11,6 +11,10 @@ classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
+]
+dependencies = [
+    "colorama",
+    "termcolor"
 ]
 
 [project.urls]

@@ -9,7 +9,7 @@ THISBIS A PORT OF Gankra/cargo-mommy
 Install python-mommy like you would any other python package~
 
 ```text
-> pip install python-mommy
+> pip install pythonmommy
 ```
 
 # Usage
@@ -21,7 +21,7 @@ Run whatever python you would normally but add "-m python_mommy" after python~
 
 print("Hello, world"
 
-> python -m python_mommy hello.py
+> python -m pythonmommy hello.py
 
 File "/home/little_girl/hello.py", line 1
     print("Hello, world"
@@ -36,7 +36,7 @@ mommy knows her little girl can do better~ ❤️
 You can alias mommy directly to python if you want, 
 
 ```text
-> alias python="python -m python_mommy"
+> alias python="python -m pythonmommy"
 ```
 
 # Configuration
