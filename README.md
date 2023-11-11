@@ -1,8 +1,10 @@
-# python-mommy
+# pythonmommy
+
+[View on PyPI](https://pypi.org/project/pythonmommy/)
 
 Mommy's here to support you when running python~ ❤️
 
-THISBIS A PORT OF Gankra/cargo-mommy
+THIS IS A PORT OF Gankra/cargo-mommy
 
 # Installation
 
