@@ -1,0 +1,22 @@
+[project]
+name = "python_mommy"
+version = "0.1.0"
+authors = [
+  { name="googer", email="googer@gmail.com" },
+]
+description = "Mommy's here to support you when running python~"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/Def-Try/python-mommy"
+"Bug Tracker" = "https://github.com/Def-Try/python-mommy/issues"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
