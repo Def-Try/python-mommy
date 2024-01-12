@@ -1,6 +1,7 @@
 # pythonmommy
 
 [View on PyPI](https://pypi.org/project/pythonmommy/)
+[Github repo](https://github.com/Def-Try/python-mommy)
 
 Mommy's here to support you when running python~ ❤️
 
