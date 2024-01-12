@@ -14,6 +14,9 @@ MOMMYS_MOODS = os.environ.get("PYTHON_MOMMYS_MOODS", "chill") # strictly chill/t
 MOMMYS_PARTS = os.environ.get("PYTHON_MOMMYS_PARTS", "milk") # anything
 MOMMYS_FUCKING = os.environ.get("PYTHON_MOMMYS_FUCKING", "slut/toy/pet/pervert/whore") # anything
 
+
+MOMMYS_PYTHON = subprocess.run(["which", "python"], capture_output=True).stdout.decode()
+
 responses = {
     "chill": {
         "positive": [
@@ -122,10 +125,11 @@ def make_response(template):
 
 if __name__ == "__main__":
     fail = False
+    code = 1
     try:
         code = subprocess.run(["python", *sys.argv[1:]]).returncode
     except: fail = True
-    if code != 0: fail = True
+    if locals().get('code', globals().get('code')) is None or code != 0: fail = True
 
     situation = "negative" if fail else "positive"
     print()
