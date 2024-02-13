@@ -4,6 +4,7 @@ import sys
 import colorama
 import termcolor
 import os
+import signal
 
 # config. separate with "/" to make a list of choices
 MOMMYS_ROLE = os.environ.get("PYTHON_MOMMYS_ROLE", "mommy") # anything
@@ -123,11 +124,23 @@ def make_response(template):
                    .replace("MOMMYS_PART", random.choice(MOMMYS_PARTS.split("/")))\
                    + " " + random.choice(MOMMYS_EMOTES.split("/"))
 
-if __name__ == "__main__":
+def main():
     fail = False
     code = 1
+
+    proc = None
+
+    def resend_sig(signum, frame):
+#        proc.send_signal(signum)
+        pass
+
+    catchable_sigs = set(signal.Signals) - {signal.SIGKILL, signal.SIGSTOP}
+    for sig in catchable_sigs:
+        signal.signal(sig, resend_sig)
+
     try:
-        code = subprocess.run(["python", *sys.argv[1:]]).returncode
+        proc = subprocess.run(["python", *sys.argv[1:]])
+        code = proc.returncode
     except: fail = True
     if locals().get('code', globals().get('code')) is None or code != 0: fail = True
 
@@ -137,3 +150,6 @@ if __name__ == "__main__":
         termcolor.colored(make_response(random.choice(responses[random.choice(MOMMYS_MOODS.split("/"))][situation])), attrs=["bold"])
     )
     exit(code)
+
+if __name__ == "__main__":
+    main()
