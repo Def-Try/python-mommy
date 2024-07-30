@@ -16,7 +16,7 @@ MOMMYS_PARTS = os.environ.get("PYTHON_MOMMYS_PARTS", "milk") # anything
 MOMMYS_FUCKING = os.environ.get("PYTHON_MOMMYS_FUCKING", "slut/toy/pet/pervert/whore") # anything
 
 
-MOMMYS_PYTHON = subprocess.run(["which", "python"], capture_output=True).stdout.decode()
+# MOMMYS_PYTHON = subprocess.run(["which", "python"], capture_output=True).stdout.decode()
 
 responses = {
     "chill": {
