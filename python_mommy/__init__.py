@@ -4,6 +4,7 @@ import sys
 import colorama
 import termcolor
 import os
+import re
 import signal
 
 from . import responses
@@ -50,7 +51,8 @@ def main():
 
     # try to find suitable interpreter from PYTHON_MOMMY_INTERPRETERS
     interpreter = "python"
-    for intp in MOMMYS_PYTHON.split("/"):
+    for intp in re.finditer(r"((?:(?:\\/)*[a-zA-Z0-9.:'\"!]*(?:\\/)*)*)(?:/|)*", MOMMYS_PYTHON):
+        intp = intp.replace("\\/", "/")
         try:
             proc = subprocess.run([intp, '-c', '"exit()"'])
             if proc.returncode == 0:
