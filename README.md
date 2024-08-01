@@ -44,6 +44,9 @@ You can alias mommy directly to python if you want,
 
 # Configuration
 
+if you don't use standart interpreter, you can set it with environment variable `PYTHON_MOMMYS_INTERPRETER`. default is "python/python3/py", and `/` symbol separates different interpreters that mommy will try to find, from first to last.
+prepend `\` before `/` to escape it, for example `\/home\/user\/.local\/bin\/python/python/python3`
+
 Mommy will read the following environment variables to make her messages better for you~ ❤️
 
 * `PYTHON_MOMMYS_LITTLE` - what to call you~ (default: "girl")
