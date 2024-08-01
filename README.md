@@ -44,6 +44,9 @@ You can alias mommy directly to python if you want,
 
 # Configuration
 
+if you use unstandart interpreter, you can set it with environment variable
+* `PYTHON_MOMMYS_INTERPRETER` - what interpreter to use for you~ (default "python/python3/py")
+
 Mommy will read the following environment variables to make her messages better for you~ ❤️
 
 * `PYTHON_MOMMYS_LITTLE` - what to call you~ (default: "girl")
