@@ -24,7 +24,7 @@ Run whatever python you would normally but add "-m python_mommy" after python~
 
 print("Hello, world"
 
-> python -m pythonmommy hello.py
+> python -m python_mommy hello.py
 
 File "/home/little_girl/hello.py", line 1
     print("Hello, world"
@@ -39,12 +39,12 @@ mommy knows her little girl can do better~ ❤️
 You can alias mommy directly to python if you want, 
 
 ```text
-> alias python="python -m pythonmommy"
+> alias python="python -m python_mommy"
 ```
 
 # Configuration
 
-if you don't use standart interpreter, you can set it with environment variable `PYTHON_MOMMYS_INTERPRETER`. default is "python/python3/py", and `/` symbol separates different interpreters that mommy will try to find, from first to last.
+if you don't use standard interpreter, you can set it with environment variable `PYTHON_MOMMYS_INTERPRETER`. default is "python/python3/py", and `/` symbol separates different interpreters that mommy will try to find, from first to last.
 prepend `\` before `/` to escape it, for example `\/home\/user\/.local\/bin\/python/python/python3`
 
 Mommy will read the following environment variables to make her messages better for you~ ❤️
